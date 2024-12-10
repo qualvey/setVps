@@ -32,19 +32,26 @@ fi
 #    -v /etc/trojan-go/:/etc/trojan-go \
 #    --network host \
 #    p4gefau1t/trojan-go
-mkdir ~/trojan && cd ~/trojan
-echo "cd trojan "
+if [ -d ~/trojan ]; then
+  cd ~/trojan
+else
+  mkdir ~/trojan && cd ~/trojan
+  echo "cd trojan "
+fi
+
 if [ -z $? ]; then
   continue
 else
   exit
 fi
+
 if {find . -maxdepth 1 type f -name "trojan*" | grep -q .}; then
   echo "trojan already exists"
 else
   wget https://github.com/p4gefau1t/trojan-go/releases/download/v0.10.6/trojan-go-linux-amd64.zip
   unzip trojan-go-linux-amd64.zip
 fi
+echo $(pwd)
 cp example/server.yaml .
 cp $certpath .
 cp $keypath .
