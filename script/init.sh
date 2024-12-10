@@ -46,7 +46,7 @@ fi
 #  exit
 #fi
 
-if {find . -maxdepth 1 type f -name "trojan*" | grep -q .}; then
+if { find . -maxdepth 1 -type f -name "trojan*" | grep -q . }; then
   echo "trojan already exists"
 else
   wget https://github.com/p4gefau1t/trojan-go/releases/download/v0.10.6/trojan-go-linux-amd64.zip
