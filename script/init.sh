@@ -3,8 +3,8 @@
 #定义变量
 ports=(22 80 443 "60000:61000/udp")
 domain="kiruryu.site"
-certpath="/etc/letsencrypt/live/yourdomain.com/fullchain.pem"
-keypath="/etc/letsencrypt/live/yourdomain.com/privkey.pem"
+certpath="/etc/letsencrypt/live/$domain/fullchain.pem"
+keypath="/etc/letsencrypt/live/$domain/privkey.pem"
 
 #instlal necicery
 apt install mosh docker certbot
