@@ -32,8 +32,7 @@ fi
 #    -v /etc/trojan-go/:/etc/trojan-go \
 #    --network host \
 #    p4gefau1t/trojan-go
-mkdir
-trojan ~/trojan && cd ~/trojan
+mkdir ~/trojan && cd ~/trojan
 echo "cd trojan "
 if [ -z $? ]; then
   continue
