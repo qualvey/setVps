@@ -34,6 +34,12 @@ fi
 #    p4gefau1t/trojan-go
 mkdir
 trojan ~/trojan && cd ~/trojan
+echo "cd trojan "
+if [ -z $? ]; then
+  continue
+else
+  exit
+fi
 if {find . -maxdepth 1 type f -name "trojan*" | grep -q .}; then
   echo "trojan already exists"
 else
