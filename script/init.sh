@@ -30,5 +30,5 @@ mkdir trojan && cd trojan
 wget https://github.com/p4gefau1t/trojan-go/releases/download/v0.10.6/trojan-go-linux-amd64.zip
 unzip trojan-go-linux-amd64.zip
 
-cp certpath .
-cp keypath .
+cp $certpath .
+cp $keypath .
